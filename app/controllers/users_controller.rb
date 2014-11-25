@@ -5,11 +5,20 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def update
+  end
+
   def show
     @user = User.find(params[:id])
     unless @user == current_user
       redirect_to :back, :alert => "Access denied."
     end
+  end
+
+  private
+
+  def user_params
+    params.require(:user_id).permit(album_attributes: [:artist, :title, :year, :song_count])
   end
 
 end

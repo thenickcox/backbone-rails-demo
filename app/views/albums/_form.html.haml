@@ -1,0 +1,12 @@
+= simple_form_for([current_user, @album]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.hidden_field :user_id, value: current_user.id
+    = f.input :artist
+    = f.input :title
+    = f.input :year
+    = f.input :song_count
+
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,27 @@
+%h1 Listing albums
+
+%table
+  %tr
+    %th Artist
+    %th Title
+    %th Year
+    %th Song count
+    %th User
+    %th
+    %th
+    %th
+
+  - @albums.each do |album|
+    %tr
+      %td= album.artist
+      %td= album.title
+      %td= album.year
+      %td= album.song_count
+      %td= album.user_id
+      %td= link_to 'Show', user_album_path(current_user, album)
+      %td= link_to 'Edit', edit_user_album_path(current_user, album)
+      %td= link_to 'Destroy', user_album_path(current_user, album), :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Album', new_user_album_path(params[:user_id])

@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Artist:
+  = @album.artist
+%p
+  %b Title:
+  = @album.title
+%p
+  %b Year:
+  = @album.year
+%p
+  %b Song count:
+  = @album.song_count
+%p
+  %b User:
+  = @album.user_id
+
+= link_to 'Edit', edit_album_path(@album)
+\|
+= link_to 'Back', albums_path
