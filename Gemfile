@@ -15,6 +15,10 @@ gem 'haml-rails'
 gem 'pg'
 gem 'simple_form'
 gem 'thin'
+
+gem 'backbone-on-rails'
+gem 'ruby-haml-js'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
