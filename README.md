@@ -14,9 +14,9 @@ Set Up (Mac OS X)
 1. `brew install postgres`
 2. Install [Postgres.app](http://postgresapp.com/)
 3. run `bundle install`
-4. run `rake db:create db:migrate`
-5. run `rake db:seed`
-6. Profit!
+4. Create a `config/database.yml` file. In it, paste the contents of [this file](https://gist.githubusercontent.com/erichurst/961978/raw/c3abf4a4b131cb813e1318bfc2516b94d1002019/database.yml.example%20postresql). You can leave the username and password blank.
+5. run `rake db:create db:migrate`
+6. run `rake db:seed`
 
 The seed data contains a user with the following credentials:
 
