@@ -43,3 +43,4 @@ This application requires:
 
 License
 -------
+[MIT](https://github.com/thenickcox/backbone-rails-demo/blob/master/LICENSE.md)
