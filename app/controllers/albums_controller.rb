@@ -3,7 +3,7 @@ class AlbumsController < ApplicationController
   respond_to :html, :json
 
   def index
-    @albums = Album.all
+    @albums = Album.where(user_id: params[:user_id])
     respond_with(@albums)
   end
 
