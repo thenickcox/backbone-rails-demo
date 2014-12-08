@@ -1,7 +1,7 @@
 %h1 Listing albums
 
 .featured-albums.panel
-  %ul#featured
+  %ul#featured{ data: { 'user-id' => params[:user_id] } }
 
 %table.table
   %tr
