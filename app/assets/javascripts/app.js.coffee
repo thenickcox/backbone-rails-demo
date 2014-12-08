@@ -3,6 +3,8 @@ App.Models.Album = Backbone.Model.extend()
 App.Collections.Albums = Backbone.Collection.extend
   model: App.Models.Album
   url: "/users/2/albums"
+  featured: ->
+    @where(featured: true)
 
 App.AlbumItemView = Backbone.View.extend
   tagName: 'li'
@@ -16,7 +18,7 @@ App.AlbumsListView = Backbone.View.extend
   initialize: ->
     @listenTo @collection, 'sync', @render
   render: ->
-    for model in @collection.models
+    for model in @collection.featured()
       itemView = new App.AlbumItemView(model: model)
       @$el.append itemView.render().el
 
