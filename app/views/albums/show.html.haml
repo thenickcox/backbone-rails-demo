@@ -16,6 +16,6 @@
   %b User:
   = @album.user_id
 
-= link_to 'Edit', edit_album_path(@album)
+= link_to 'Edit', edit_user_album_path(current_user, @album)
 \|
-= link_to 'Back', albums_path
+= link_to 'Back', user_albums_path
