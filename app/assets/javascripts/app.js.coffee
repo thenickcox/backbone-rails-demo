@@ -10,7 +10,7 @@ App.Collections.Albums = Backbone.Collection.extend
 
 App.AlbumItemView = Backbone.View.extend
   tagName: 'li'
-  template: _.template "<%= title %>"
+  template: _.template "<a href='/users/<%= user_id %>/albums/<%= id %>'><%= title %></a><button class='unfeature'>Unfeature&nbsp;&times;</button>"
   render: ->
     @$el.html @template @model.attributes
     @
