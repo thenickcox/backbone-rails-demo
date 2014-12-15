@@ -14,6 +14,12 @@ App.AlbumItemView = Backbone.View.extend
   render: ->
     @$el.html @template @model.attributes
     @
+  events:
+    'click .unfeature': 'unfeature'
+  unfeature: ->
+    @model.save(featured: false)
+    @remove()
+
 
 App.AlbumsListView = Backbone.View.extend
   el: '#featured'
