@@ -1,6 +1,10 @@
 %h1 Listing albums
 
 .featured-albums.panel
+  %h3 Featured Albums
+  %p.loading
+    %span.text Loading featured albums
+    %span.loader
   %ul#featured{ data: { 'user-id' => params[:user_id] } }
 
 %table.table

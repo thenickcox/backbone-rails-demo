@@ -3,4 +3,4 @@ $ ->
   App.albumsListView = new App.AlbumsListView(collection: App.albums)
   App.albums.fetch
     success: ->
-      App.albumsListView.setPlaceholder()
+      App.albumsListView.hideLoader().setPlaceholder()
